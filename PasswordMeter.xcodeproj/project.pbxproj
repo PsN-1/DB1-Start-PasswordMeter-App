@@ -15,6 +15,7 @@
 		66B28ADB264CC685003BF76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B28AD9264CC685003BF76B /* LaunchScreen.storyboard */; };
 		66B28AE6264CC685003BF76B /* PasswordMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AE5264CC685003BF76B /* PasswordMeterTests.swift */; };
 		66B28AF1264CC685003BF76B /* PasswordMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AF0264CC685003BF76B /* PasswordMeterUITests.swift */; };
+		66D6D564264CD5730068445A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D563264CD5730068445A /* ResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		66B28AEC264CC685003BF76B /* PasswordMeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B28AF0264CC685003BF76B /* PasswordMeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMeterUITests.swift; sourceTree = "<group>"; };
 		66B28AF2264CC685003BF76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D6D563264CD5730068445A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				66B28ACE264CC682003BF76B /* AppDelegate.swift */,
 				66B28AD0264CC682003BF76B /* SceneDelegate.swift */,
 				66B28AD2264CC682003BF76B /* ContentView.swift */,
+				66D6D563264CD5730068445A /* ResultsView.swift */,
 				66B28AD4264CC685003BF76B /* Assets.xcassets */,
 				66B28AD9264CC685003BF76B /* LaunchScreen.storyboard */,
 				66B28ADC264CC685003BF76B /* Info.plist */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66B28ACF264CC682003BF76B /* AppDelegate.swift in Sources */,
+				66D6D564264CD5730068445A /* ResultsView.swift in Sources */,
 				66B28AD1264CC682003BF76B /* SceneDelegate.swift in Sources */,
 				66B28AD3264CC682003BF76B /* ContentView.swift in Sources */,
 			);
