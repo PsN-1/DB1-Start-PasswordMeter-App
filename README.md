@@ -15,5 +15,3 @@
 <img src="ProjectsImages/PasswordMeter_01.png" width="150" height="300">___
 <img src="ProjectsImages/PasswordMeter_02.png" width="150" height="300">___
 <img src="ProjectsImages/PasswordMeter_03.png" width="150" height="300">___
-<img src="ProjectsImages/PasswordMeter_04.png" width="150" height="300">___
-
