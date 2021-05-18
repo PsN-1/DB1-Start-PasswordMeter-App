@@ -12,16 +12,22 @@ struct ContentView: View {
     @State var isShowingPassword = false
     @State private var isShowingResultsView = false
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         NavigationView{
             VStack {
                 Group {
                     HStack {
+                        Text("Password: ") .padding(.leading)
                         if isShowingPassword {
-                            TextField("Password: ", text: $passwordInput).padding()
+                            TextField("Password", text: $passwordInput).padding()
+                                .frame(height: 55)
                         } else {
-                            SecureField("Password: ", text: $passwordInput).padding()
+                            SecureField("Password", text: $passwordInput).padding()
+                                .frame(height: 55)
                         }
+
                         Button(action: {
                             isShowingPassword.toggle()
                         }) {
@@ -30,24 +36,38 @@ struct ContentView: View {
                         }
                     }
                     .padding(.trailing)
-                    .background(Color(red: 233/255, green: 234/255, blue: 243/255))
+                    .background(colorScheme == .light ? Color(red: 233/255, green: 234/255, blue: 243/255) : Color(.lightGray))
                     .cornerRadius(15)
                 }
-                Button(action: { isShowingResultsView = true }) {
+                Button(action: {
+                    print(passwordInput)
+                        isShowingResultsView = true
+                }) {
                     Text("Submit")
                         .fixedSize()
-                        .frame(width: 140, height: 35)
+                        .frame(width: 140, height: 40)
                         .foregroundColor(.white)
                         .background(Color.blue)
                         .cornerRadius(10)
                 }
-                    .padding()
+                .padding()
             }
             .offset(x: 0, y: -50)
             .padding()
             .navigationBarTitle("Password Meter")
             .sheet(isPresented: $isShowingResultsView) {
-                 ResultsView()
+                
+                let additions = PasswordVariablesCalculator(passwordInput).calculateAdditionsOfPasswordStrength()
+                let deductions = PasswordVariablesCalculator(passwordInput).calculateDeductionsOfPasswordStrength()
+                let score = Score(passwordInput).getScore()
+                let complexity = PasswordComplexity(score).calculatePasswordComplexity()
+                ResultsView(
+                    password: passwordInput,
+                    resultsAdditions: additions,
+                    resultsDeductions: deductions,
+                    score: score,
+                    complexity: complexity
+                )
             }
         }
     }
@@ -55,6 +75,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().previewDevice("Iphone 12")
+        Group {
+            ContentView()
+        }
     }
 }
