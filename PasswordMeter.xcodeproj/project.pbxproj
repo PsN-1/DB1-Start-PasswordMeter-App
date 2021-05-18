@@ -7,6 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6638C5832651B2CC00A4149F /* UppercaseLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C5822651B2CC00A4149F /* UppercaseLetters.swift */; };
+		6638C5852651B63600A4149F /* UppercaseLettersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C5842651B63600A4149F /* UppercaseLettersTest.swift */; };
+		6638C5882651BD7500A4149F /* LowercaseLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C5872651BD7500A4149F /* LowercaseLetters.swift */; };
+		6638C58A2651BDEB00A4149F /* LowercaseLettersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C5892651BDEB00A4149F /* LowercaseLettersTest.swift */; };
+		6638C58C2651BED700A4149F /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C58B2651BED700A4149F /* Numbers.swift */; };
+		6638C58E2651BFE000A4149F /* NumbersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C58D2651BFE000A4149F /* NumbersTest.swift */; };
+		6638C5902651C14E00A4149F /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C58F2651C14E00A4149F /* Symbols.swift */; };
+		6638C5922651C1E200A4149F /* SymbolsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638C5912651C1E200A4149F /* SymbolsTest.swift */; };
+		66A23F822651CB0F00884770 /* MiddleNumbersOrSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F812651CB0F00884770 /* MiddleNumbersOrSymbols.swift */; };
+		66A23F842651CCDE00884770 /* MiddleNumbersOrSymbolsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F832651CCDE00884770 /* MiddleNumbersOrSymbolsTest.swift */; };
+		66A23F872651CDD600884770 /* PasswordVariablesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F862651CDD600884770 /* PasswordVariablesCalculator.swift */; };
+		66A23F892651D35A00884770 /* Requirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F882651D35A00884770 /* Requirements.swift */; };
+		66A23F8E2651D3FE00884770 /* AdditionsVariablesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F8D2651D3FE00884770 /* AdditionsVariablesBuilder.swift */; };
+		66A23F902651D72B00884770 /* RequirementsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F8F2651D72B00884770 /* RequirementsTest.swift */; };
+		66A23F95265225A200884770 /* LettersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F94265225A200884770 /* LettersOnly.swift */; };
+		66A23F972652277000884770 /* DeductionsVariablesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F962652277000884770 /* DeductionsVariablesBuilder.swift */; };
+		66A23F9A265229D300884770 /* LettersOnlyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F99265229D300884770 /* LettersOnlyTest.swift */; };
+		66A23F9C26522BFF00884770 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F9B26522BFF00884770 /* NumbersOnly.swift */; };
+		66A23F9E26522CBD00884770 /* NumbersOnlyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F9D26522CBD00884770 /* NumbersOnlyTest.swift */; };
+		66A23FA026522D3A00884770 /* RepeatCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23F9F26522D3A00884770 /* RepeatCharacters.swift */; };
+		66A23FA226522F2B00884770 /* RepeatCharactersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FA126522F2B00884770 /* RepeatCharactersTest.swift */; };
+		66A23FA42652305200884770 /* ConsecutiveUppercaseLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FA32652305200884770 /* ConsecutiveUppercaseLetters.swift */; };
+		66A23FA62652316E00884770 /* ConsecutiveUppercaseLettersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FA52652316E00884770 /* ConsecutiveUppercaseLettersTest.swift */; };
+		66A23FA8265232E200884770 /* ConsecutiveLowercaseLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FA7265232E200884770 /* ConsecutiveLowercaseLetters.swift */; };
+		66A23FAA2652334000884770 /* ConsecutiveLowercaseLettersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FA92652334000884770 /* ConsecutiveLowercaseLettersTest.swift */; };
+		66A23FAC2652342D00884770 /* ConsecutiveNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FAB2652342D00884770 /* ConsecutiveNumbers.swift */; };
+		66A23FAE265234D000884770 /* ConsecutiveNumbersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FAD265234D000884770 /* ConsecutiveNumbersTest.swift */; };
+		66A23FB02652353C00884770 /* SequentialLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FAF2652353C00884770 /* SequentialLetters.swift */; };
+		66A23FB22652393400884770 /* SequentialLettersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FB12652393400884770 /* SequentialLettersTest.swift */; };
+		66A23FB426523BBC00884770 /* SequentialNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FB326523BBC00884770 /* SequentialNumbers.swift */; };
+		66A23FB626523C5500884770 /* SequentialNumbersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FB526523C5500884770 /* SequentialNumbersTest.swift */; };
+		66A23FB826523D1A00884770 /* SequentialSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FB726523D1A00884770 /* SequentialSymbols.swift */; };
+		66A23FBA26523DAD00884770 /* SequentialSymbolsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FB926523DAD00884770 /* SequentialSymbolsTest.swift */; };
+		66A23FBC26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FBB26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift */; };
+		66A23FBE26523FBE00884770 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FBD26523FBE00884770 /* Score.swift */; };
+		66A23FC02652414500884770 /* ScoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FBF2652414500884770 /* ScoreTest.swift */; };
+		66A23FC2265249CD00884770 /* PasswordComplexity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A23FC1265249CD00884770 /* PasswordComplexity.swift */; };
 		66B28ACF264CC682003BF76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28ACE264CC682003BF76B /* AppDelegate.swift */; };
 		66B28AD1264CC682003BF76B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AD0264CC682003BF76B /* SceneDelegate.swift */; };
 		66B28AD3264CC682003BF76B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AD2264CC682003BF76B /* ContentView.swift */; };
@@ -15,7 +52,13 @@
 		66B28ADB264CC685003BF76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B28AD9264CC685003BF76B /* LaunchScreen.storyboard */; };
 		66B28AE6264CC685003BF76B /* PasswordMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AE5264CC685003BF76B /* PasswordMeterTests.swift */; };
 		66B28AF1264CC685003BF76B /* PasswordMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AF0264CC685003BF76B /* PasswordMeterUITests.swift */; };
+		66C6191826540812006FD37A /* PasswordComplexityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C6191726540812006FD37A /* PasswordComplexityTest.swift */; };
 		66D6D564264CD5730068445A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D563264CD5730068445A /* ResultsView.swift */; };
+		66D6D568264CDD420068445A /* AnalysisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D567264CDD420068445A /* AnalysisResult.swift */; };
+		66D6D56A264CDDE30068445A /* RequirementLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D569264CDDE30068445A /* RequirementLevel.swift */; };
+		66D6D56D264CDF0C0068445A /* NumberOfCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D56C264CDF0C0068445A /* NumberOfCharacters.swift */; };
+		66D6D56F264CE0EB0068445A /* NumberOfCharactersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D56E264CE0EB0068445A /* NumberOfCharactersTest.swift */; };
+		66EDA242265191F900165943 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EDA241265191F900165943 /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +79,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6638C5822651B2CC00A4149F /* UppercaseLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseLetters.swift; sourceTree = "<group>"; };
+		6638C5842651B63600A4149F /* UppercaseLettersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UppercaseLettersTest.swift; sourceTree = "<group>"; };
+		6638C5872651BD7500A4149F /* LowercaseLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowercaseLetters.swift; sourceTree = "<group>"; };
+		6638C5892651BDEB00A4149F /* LowercaseLettersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowercaseLettersTest.swift; sourceTree = "<group>"; };
+		6638C58B2651BED700A4149F /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		6638C58D2651BFE000A4149F /* NumbersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTest.swift; sourceTree = "<group>"; };
+		6638C58F2651C14E00A4149F /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		6638C5912651C1E200A4149F /* SymbolsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsTest.swift; sourceTree = "<group>"; };
+		66A23F812651CB0F00884770 /* MiddleNumbersOrSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleNumbersOrSymbols.swift; sourceTree = "<group>"; };
+		66A23F832651CCDE00884770 /* MiddleNumbersOrSymbolsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleNumbersOrSymbolsTest.swift; sourceTree = "<group>"; };
+		66A23F862651CDD600884770 /* PasswordVariablesCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVariablesCalculator.swift; sourceTree = "<group>"; };
+		66A23F882651D35A00884770 /* Requirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requirements.swift; sourceTree = "<group>"; };
+		66A23F8D2651D3FE00884770 /* AdditionsVariablesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionsVariablesBuilder.swift; sourceTree = "<group>"; };
+		66A23F8F2651D72B00884770 /* RequirementsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementsTest.swift; sourceTree = "<group>"; };
+		66A23F94265225A200884770 /* LettersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersOnly.swift; sourceTree = "<group>"; };
+		66A23F962652277000884770 /* DeductionsVariablesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeductionsVariablesBuilder.swift; sourceTree = "<group>"; };
+		66A23F99265229D300884770 /* LettersOnlyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersOnlyTest.swift; sourceTree = "<group>"; };
+		66A23F9B26522BFF00884770 /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
+		66A23F9D26522CBD00884770 /* NumbersOnlyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnlyTest.swift; sourceTree = "<group>"; };
+		66A23F9F26522D3A00884770 /* RepeatCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCharacters.swift; sourceTree = "<group>"; };
+		66A23FA126522F2B00884770 /* RepeatCharactersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCharactersTest.swift; sourceTree = "<group>"; };
+		66A23FA32652305200884770 /* ConsecutiveUppercaseLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsecutiveUppercaseLetters.swift; sourceTree = "<group>"; };
+		66A23FA52652316E00884770 /* ConsecutiveUppercaseLettersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsecutiveUppercaseLettersTest.swift; sourceTree = "<group>"; };
+		66A23FA7265232E200884770 /* ConsecutiveLowercaseLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsecutiveLowercaseLetters.swift; sourceTree = "<group>"; };
+		66A23FA92652334000884770 /* ConsecutiveLowercaseLettersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsecutiveLowercaseLettersTest.swift; sourceTree = "<group>"; };
+		66A23FAB2652342D00884770 /* ConsecutiveNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsecutiveNumbers.swift; sourceTree = "<group>"; };
+		66A23FAD265234D000884770 /* ConsecutiveNumbersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsecutiveNumbersTest.swift; sourceTree = "<group>"; };
+		66A23FAF2652353C00884770 /* SequentialLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialLetters.swift; sourceTree = "<group>"; };
+		66A23FB12652393400884770 /* SequentialLettersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialLettersTest.swift; sourceTree = "<group>"; };
+		66A23FB326523BBC00884770 /* SequentialNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialNumbers.swift; sourceTree = "<group>"; };
+		66A23FB526523C5500884770 /* SequentialNumbersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialNumbersTest.swift; sourceTree = "<group>"; };
+		66A23FB726523D1A00884770 /* SequentialSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialSymbols.swift; sourceTree = "<group>"; };
+		66A23FB926523DAD00884770 /* SequentialSymbolsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialSymbolsTest.swift; sourceTree = "<group>"; };
+		66A23FBB26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeductionsVariablesBuilderForScore.swift; sourceTree = "<group>"; };
+		66A23FBD26523FBE00884770 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		66A23FBF2652414500884770 /* ScoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTest.swift; sourceTree = "<group>"; };
+		66A23FC1265249CD00884770 /* PasswordComplexity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordComplexity.swift; sourceTree = "<group>"; };
 		66B28ACB264CC682003BF76B /* PasswordMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B28ACE264CC682003BF76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66B28AD0264CC682003BF76B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +130,13 @@
 		66B28AEC264CC685003BF76B /* PasswordMeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B28AF0264CC685003BF76B /* PasswordMeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMeterUITests.swift; sourceTree = "<group>"; };
 		66B28AF2264CC685003BF76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C6191726540812006FD37A /* PasswordComplexityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordComplexityTest.swift; sourceTree = "<group>"; };
 		66D6D563264CD5730068445A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		66D6D567264CDD420068445A /* AnalysisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResult.swift; sourceTree = "<group>"; };
+		66D6D569264CDDE30068445A /* RequirementLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementLevel.swift; sourceTree = "<group>"; };
+		66D6D56C264CDF0C0068445A /* NumberOfCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfCharacters.swift; sourceTree = "<group>"; };
+		66D6D56E264CE0EB0068445A /* NumberOfCharactersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfCharactersTest.swift; sourceTree = "<group>"; };
+		66EDA241265191F900165943 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +164,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6638C5862651BCD900A4149F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66B28AD2264CC682003BF76B /* ContentView.swift */,
+				66D6D563264CD5730068445A /* ResultsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		66A23F8C2651D3E600884770 /* VariablesBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				66A23F8D2651D3FE00884770 /* AdditionsVariablesBuilder.swift */,
+				66A23FBB26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift */,
+				66A23F962652277000884770 /* DeductionsVariablesBuilder.swift */,
+			);
+			path = VariablesBuilders;
+			sourceTree = "<group>";
+		};
+		66A23F912652255A00884770 /* Deductions */ = {
+			isa = PBXGroup;
+			children = (
+				66A23F94265225A200884770 /* LettersOnly.swift */,
+				66A23F9B26522BFF00884770 /* NumbersOnly.swift */,
+				66A23F9F26522D3A00884770 /* RepeatCharacters.swift */,
+				66A23FA32652305200884770 /* ConsecutiveUppercaseLetters.swift */,
+				66A23FAF2652353C00884770 /* SequentialLetters.swift */,
+				66A23FB326523BBC00884770 /* SequentialNumbers.swift */,
+				66A23FB726523D1A00884770 /* SequentialSymbols.swift */,
+				66A23FA7265232E200884770 /* ConsecutiveLowercaseLetters.swift */,
+				66A23FAB2652342D00884770 /* ConsecutiveNumbers.swift */,
+			);
+			path = Deductions;
+			sourceTree = "<group>";
+		};
+		66A23F98265229A800884770 /* DeductionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				66A23F99265229D300884770 /* LettersOnlyTest.swift */,
+				66A23F9D26522CBD00884770 /* NumbersOnlyTest.swift */,
+				66A23FA126522F2B00884770 /* RepeatCharactersTest.swift */,
+				66A23FAD265234D000884770 /* ConsecutiveNumbersTest.swift */,
+				66A23FA52652316E00884770 /* ConsecutiveUppercaseLettersTest.swift */,
+				66A23FA92652334000884770 /* ConsecutiveLowercaseLettersTest.swift */,
+				66A23FB12652393400884770 /* SequentialLettersTest.swift */,
+				66A23FB526523C5500884770 /* SequentialNumbersTest.swift */,
+				66A23FB926523DAD00884770 /* SequentialSymbolsTest.swift */,
+			);
+			path = DeductionsTests;
+			sourceTree = "<group>";
+		};
 		66B28AC2264CC682003BF76B = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +238,10 @@
 		66B28ACD264CC682003BF76B /* PasswordMeter */ = {
 			isa = PBXGroup;
 			children = (
+				66D6D565264CDB700068445A /* PasswordMeterLogic */,
 				66B28ACE264CC682003BF76B /* AppDelegate.swift */,
 				66B28AD0264CC682003BF76B /* SceneDelegate.swift */,
-				66B28AD2264CC682003BF76B /* ContentView.swift */,
-				66D6D563264CD5730068445A /* ResultsView.swift */,
+				6638C5862651BCD900A4149F /* Views */,
 				66B28AD4264CC685003BF76B /* Assets.xcassets */,
 				66B28AD9264CC685003BF76B /* LaunchScreen.storyboard */,
 				66B28ADC264CC685003BF76B /* Info.plist */,
@@ -124,7 +261,11 @@
 		66B28AE4264CC685003BF76B /* PasswordMeterTests */ = {
 			isa = PBXGroup;
 			children = (
+				66A23F98265229A800884770 /* DeductionsTests */,
+				66EDA2432651961600165943 /* AdditionsTests */,
 				66B28AE5264CC685003BF76B /* PasswordMeterTests.swift */,
+				66C6191726540812006FD37A /* PasswordComplexityTest.swift */,
+				66A23FBF2652414500884770 /* ScoreTest.swift */,
 				66B28AE7264CC685003BF76B /* Info.plist */,
 			);
 			path = PasswordMeterTests;
@@ -137,6 +278,58 @@
 				66B28AF2264CC685003BF76B /* Info.plist */,
 			);
 			path = PasswordMeterUITests;
+			sourceTree = "<group>";
+		};
+		66C6191B26540CCF006FD37A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66D6D567264CDD420068445A /* AnalysisResult.swift */,
+				66EDA241265191F900165943 /* Results.swift */,
+				66D6D569264CDDE30068445A /* RequirementLevel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66D6D565264CDB700068445A /* PasswordMeterLogic */ = {
+			isa = PBXGroup;
+			children = (
+				66C6191B26540CCF006FD37A /* Models */,
+				66D6D56B264CDEEE0068445A /* Additions */,
+				66A23F912652255A00884770 /* Deductions */,
+				66A23F8C2651D3E600884770 /* VariablesBuilders */,
+				66A23FBD26523FBE00884770 /* Score.swift */,
+				66A23F862651CDD600884770 /* PasswordVariablesCalculator.swift */,
+				66A23FC1265249CD00884770 /* PasswordComplexity.swift */,
+			);
+			path = PasswordMeterLogic;
+			sourceTree = "<group>";
+		};
+		66D6D56B264CDEEE0068445A /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				66D6D56C264CDF0C0068445A /* NumberOfCharacters.swift */,
+				6638C5822651B2CC00A4149F /* UppercaseLetters.swift */,
+				6638C58B2651BED700A4149F /* Numbers.swift */,
+				6638C5872651BD7500A4149F /* LowercaseLetters.swift */,
+				6638C58F2651C14E00A4149F /* Symbols.swift */,
+				66A23F812651CB0F00884770 /* MiddleNumbersOrSymbols.swift */,
+				66A23F882651D35A00884770 /* Requirements.swift */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		66EDA2432651961600165943 /* AdditionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				66D6D56E264CE0EB0068445A /* NumberOfCharactersTest.swift */,
+				66A23F832651CCDE00884770 /* MiddleNumbersOrSymbolsTest.swift */,
+				66A23F8F2651D72B00884770 /* RequirementsTest.swift */,
+				6638C5842651B63600A4149F /* UppercaseLettersTest.swift */,
+				6638C5892651BDEB00A4149F /* LowercaseLettersTest.swift */,
+				6638C58D2651BFE000A4149F /* NumbersTest.swift */,
+				6638C5912651C1E200A4149F /* SymbolsTest.swift */,
+			);
+			path = AdditionsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +462,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A23FB02652353C00884770 /* SequentialLetters.swift in Sources */,
+				66A23F95265225A200884770 /* LettersOnly.swift in Sources */,
+				66A23F9C26522BFF00884770 /* NumbersOnly.swift in Sources */,
+				66A23FC2265249CD00884770 /* PasswordComplexity.swift in Sources */,
+				66A23FA026522D3A00884770 /* RepeatCharacters.swift in Sources */,
+				66D6D56A264CDDE30068445A /* RequirementLevel.swift in Sources */,
+				66D6D568264CDD420068445A /* AnalysisResult.swift in Sources */,
 				66B28ACF264CC682003BF76B /* AppDelegate.swift in Sources */,
+				66A23FBC26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift in Sources */,
+				66A23FAC2652342D00884770 /* ConsecutiveNumbers.swift in Sources */,
+				66A23FA8265232E200884770 /* ConsecutiveLowercaseLetters.swift in Sources */,
 				66D6D564264CD5730068445A /* ResultsView.swift in Sources */,
+				66A23FB426523BBC00884770 /* SequentialNumbers.swift in Sources */,
 				66B28AD1264CC682003BF76B /* SceneDelegate.swift in Sources */,
+				66A23F822651CB0F00884770 /* MiddleNumbersOrSymbols.swift in Sources */,
+				66A23FBE26523FBE00884770 /* Score.swift in Sources */,
+				6638C5882651BD7500A4149F /* LowercaseLetters.swift in Sources */,
+				66A23F8E2651D3FE00884770 /* AdditionsVariablesBuilder.swift in Sources */,
+				6638C5832651B2CC00A4149F /* UppercaseLetters.swift in Sources */,
+				66A23F872651CDD600884770 /* PasswordVariablesCalculator.swift in Sources */,
+				66A23F972652277000884770 /* DeductionsVariablesBuilder.swift in Sources */,
+				66A23FB826523D1A00884770 /* SequentialSymbols.swift in Sources */,
+				66A23FA42652305200884770 /* ConsecutiveUppercaseLetters.swift in Sources */,
+				66A23F892651D35A00884770 /* Requirements.swift in Sources */,
+				6638C58C2651BED700A4149F /* Numbers.swift in Sources */,
+				66D6D56D264CDF0C0068445A /* NumberOfCharacters.swift in Sources */,
+				6638C5902651C14E00A4149F /* Symbols.swift in Sources */,
+				66EDA242265191F900165943 /* Results.swift in Sources */,
 				66B28AD3264CC682003BF76B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +498,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C6191826540812006FD37A /* PasswordComplexityTest.swift in Sources */,
+				66A23F9E26522CBD00884770 /* NumbersOnlyTest.swift in Sources */,
 				66B28AE6264CC685003BF76B /* PasswordMeterTests.swift in Sources */,
+				6638C58A2651BDEB00A4149F /* LowercaseLettersTest.swift in Sources */,
+				66A23F842651CCDE00884770 /* MiddleNumbersOrSymbolsTest.swift in Sources */,
+				66A23FA226522F2B00884770 /* RepeatCharactersTest.swift in Sources */,
+				66A23FA62652316E00884770 /* ConsecutiveUppercaseLettersTest.swift in Sources */,
+				66A23FB22652393400884770 /* SequentialLettersTest.swift in Sources */,
+				66D6D56F264CE0EB0068445A /* NumberOfCharactersTest.swift in Sources */,
+				6638C5922651C1E200A4149F /* SymbolsTest.swift in Sources */,
+				66A23F9A265229D300884770 /* LettersOnlyTest.swift in Sources */,
+				66A23F902651D72B00884770 /* RequirementsTest.swift in Sources */,
+				6638C5852651B63600A4149F /* UppercaseLettersTest.swift in Sources */,
+				66A23FC02652414500884770 /* ScoreTest.swift in Sources */,
+				66A23FBA26523DAD00884770 /* SequentialSymbolsTest.swift in Sources */,
+				66A23FAA2652334000884770 /* ConsecutiveLowercaseLettersTest.swift in Sources */,
+				66A23FB626523C5500884770 /* SequentialNumbersTest.swift in Sources */,
+				6638C58E2651BFE000A4149F /* NumbersTest.swift in Sources */,
+				66A23FAE265234D000884770 /* ConsecutiveNumbersTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
