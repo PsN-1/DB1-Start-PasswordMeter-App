@@ -21,11 +21,23 @@ class LettersOnly: AnalysisResult {
     }
     
     func calculateCountOfLettersOnly() {
-        let arrayOfRequirementsVariables = DeductionsVariablesBuilder().getCountOfAllValuesForRequirementsCalculation(password)
+        let numberOfCharacters = NumberOfCharacters(password).getResult().count
         
-        if (arrayOfRequirementsVariables["LowercaseLetters"]!.count > 0 || arrayOfRequirementsVariables["UppercaseLetters"]!.count > 0) && arrayOfRequirementsVariables["Symbols"]!.count == 0 && arrayOfRequirementsVariables["Numbers"]!.count == 0 {
-            countLettersOnly = arrayOfRequirementsVariables["NumberOfCharacters"]!.count;
+        if isLettersOnly() {
+            count = numberOfCharacters;
         }
+    }
+    
+    func isLettersOnly() -> Bool {
+        var isLettersOnly = true
+        
+        loopClosure().loop(word: password) { character in
+            if !character.isLetter {
+                isLettersOnly = false
+            }
+        }
+        
+        return isLettersOnly
     }
     
     func calculateBonusOfLettersOnly() {
