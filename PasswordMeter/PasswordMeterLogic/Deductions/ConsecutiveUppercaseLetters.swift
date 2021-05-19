@@ -9,9 +9,9 @@ import Foundation
 
 class ConsecutiveUppercaseLetters: AnalysisResult {
     var password: String
-    private var countConsecutiveUppercaseLetters: Int = 0
-    private var bonusConsecutiveUppercaseLetters: Int = 0
-    private var nTmpAlphaUC: Int? = nil
+    private var count: Int = 0
+    private var bonus: Int = 0
+    private var indexOfUppercaseLetter: Int?
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
@@ -22,29 +22,30 @@ class ConsecutiveUppercaseLetters: AnalysisResult {
     }
     
     func calculateCountOfConsecutiveUpperCaseLetters() {
-        let arrayOfLetters: [Character] = Array(password)
+        let letters: [Character] = Array(password)
         
-        for i in 0..<arrayOfLetters.count {
-            if arrayOfLetters[i].isUppercase && arrayOfLetters[i].isLetter {
-                if (nTmpAlphaUC != nil) {
-                    if (nTmpAlphaUC! + 1 == i) {
-                        countConsecutiveUppercaseLetters += 1
+        for currentLetter in 0..<letters.count {
+            if letters[currentLetter].isUppercase && letters[currentLetter].isLetter {
+                if let indexOfPreviousUppercaseLetter = indexOfUppercaseLetter {
+                    if (indexOfPreviousUppercaseLetter + 1 == currentLetter) {
+                        count += 1
                     }
                 }
-                nTmpAlphaUC = i
+                indexOfUppercaseLetter = currentLetter
             }
         }
     }
     
     func calculateBonusOfConsecutiveUpperCaseLetters() {
-        if (countConsecutiveUppercaseLetters > 0) {
-            let multiplierConsecutiveAlphaUC = 2
-            bonusConsecutiveUppercaseLetters = countConsecutiveUppercaseLetters * multiplierConsecutiveAlphaUC;
+        let bonusMultiplier = 2
+
+        if count > 0 {
+            bonus = count * bonusMultiplier
         }
     }
     
     func calculateRequirementLevel() {
-        if (countConsecutiveUppercaseLetters > 0) {
+        if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {
             requirementLevel = RequirementLevel.SUFFICIENT
@@ -52,6 +53,6 @@ class ConsecutiveUppercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "Consecutive Uppercase Letters", count: countConsecutiveUppercaseLetters, bonus: bonusConsecutiveUppercaseLetters, requirementLevel: requirementLevel)
+        return Results(className: "Consecutive Uppercase Letters", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }
