@@ -21,19 +21,21 @@ class Symbols: AnalysisResult {
     }
     
     func calculateCountOfSymbols() {
-        let arrayOfLetters: [Character] = Array(password)
-        let passwordRegex = "(?=.*[!@#$&*])"
-        for letter in arrayOfLetters {
-            if passwordRegex.contains(letter) {
+        let symbols = "(?=.*[!@#$&*])"
+        
+        loopClosure().loop(word: password) { character in
+            if symbols.contains(character) {
                 countSymbol += 1
             }
         }
     }
 
     func calculateBonusSymbol() {
-        if (countSymbol > 0) {
-            let multiplierSymbol = 6;
-            bonusSymbol = countSymbol * multiplierSymbol;
+        let bonusMultiplier = 6
+        let haveSymbols = countSymbol > 0
+
+        if haveSymbols {
+            bonusSymbol = countSymbol * bonusMultiplier
         }
     }
 

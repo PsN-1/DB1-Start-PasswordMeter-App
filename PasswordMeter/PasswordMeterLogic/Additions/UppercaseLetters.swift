@@ -21,9 +21,7 @@ class UppercaseLetters: AnalysisResult {
     }
     
     func calculateCountOfUpperCaseLetter() {
-        let arrayOfLetters: [Character] = Array(password)
-        
-        for letter in arrayOfLetters {
+        loopClosure().loop(word: password) { letter in
             if letter.isUppercase && letter.isLetter {
                 countAlphaUpperCase += 1
             }
@@ -31,8 +29,12 @@ class UppercaseLetters: AnalysisResult {
     }
     
     func calculateBonusLetterUpperCase() {
-        if countAlphaUpperCase > 0 && countAlphaUpperCase < password.count {
-            bonusAlphaUpperCase = (password.count - countAlphaUpperCase) * 2
+        let isNotOnlyUppercaseLetters = countAlphaUpperCase < password.count
+        let haveUppercaseLetter = countAlphaUpperCase > 0
+        let multiplicadorBonus = 2
+        
+        if haveUppercaseLetter && isNotOnlyUppercaseLetters {
+            bonusAlphaUpperCase = (password.count - countAlphaUpperCase) * multiplicadorBonus
         }
     }
     

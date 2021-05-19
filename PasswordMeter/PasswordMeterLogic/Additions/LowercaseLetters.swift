@@ -21,9 +21,7 @@ class LowercaseLetters: AnalysisResult {
     }
     
     func calculateCountOfLowerCaseLetter() {
-        let arrayOfLetters: [Character] = Array(password)
-        
-        for letter in arrayOfLetters {
+        loopClosure().loop(word: password) { letter in
             if letter.isLowercase && letter.isLetter {
                 countAlphaLowerCase += 1
             }
@@ -31,8 +29,12 @@ class LowercaseLetters: AnalysisResult {
     }
     
     func calculateBonusLetterLowerCase() {
-        if countAlphaLowerCase > 0 && countAlphaLowerCase < password.count {
-            bonusAlphaLowerCase = (password.count - countAlphaLowerCase) * 2
+        let isNotOnlyLowercaseLetters = countAlphaLowerCase < password.count
+        let haveLowercaseLetter = countAlphaLowerCase > 0
+        let multiplicadorBonus = 2
+        
+        if haveLowercaseLetter && isNotOnlyLowercaseLetters {
+            bonusAlphaLowerCase = (password.count - countAlphaLowerCase) * multiplicadorBonus
         }
     }
     

@@ -37,12 +37,13 @@ class Requirements: AnalysisResult {
     }
     
     func calculateBonusOfRequirements() {
-        let multiplier = 2
+        let bonusMultiplier = 2
         let minimumLength = 8
         let numberMinimumOfRequiredChars = password.count >= minimumLength ? 3 : 4
-
-        if (countRequirements > numberMinimumOfRequiredChars) {
-            bonusRequirements = countRequirements * multiplier
+        let satisfiesRequirements = countRequirements > numberMinimumOfRequiredChars
+        
+        if satisfiesRequirements {
+            bonusRequirements = countRequirements * bonusMultiplier
         }
     }
     

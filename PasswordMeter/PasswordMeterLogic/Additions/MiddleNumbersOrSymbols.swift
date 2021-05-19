@@ -21,23 +21,29 @@ class MiddleNumbersOrSymbols: AnalysisResult {
     }
     
     func calculateCountOfMiddleCharacters(){
-        let arrayOfLetters: [Character] = Array(password)
-        let passwordRegex = "(?=.*[!@#$&%*^]`~;:{}),/|\\"
-        let numberRegex = "1234567890"
+        let symbols = "(?=.*[!@#$&%*^]`~;:{}),/|\\"
+        let numbers = "1234567890"
+        let middlePassword = removeFirstAndLastCharacters(from: password)
 
-        for i in 0..<arrayOfLetters.count {
-            if passwordRegex.contains(arrayOfLetters[i]) || numberRegex.contains(arrayOfLetters[i]) {
-                if (i > 0 && i < arrayOfLetters.count - 1) {
+        loopClosure().loop(word: middlePassword) { character in
+            if symbols.contains(character) || numbers.contains(character) {
                     countMidChar += 1
-                }
             }
         }
+    }
+    
+    func removeFirstAndLastCharacters(from password: String) -> String {
+        let ignoreTheFirstLetter = password.dropFirst()
+        let ignoreTheLastLetter = ignoreTheFirstLetter.dropLast()
         
+        return String(ignoreTheLastLetter)
     }
     
     func calculateBonusMiddleCharacters(){
-        if (countMidChar > 0) {
-            let multiplierMidChar = 2
+        let haveMiddleCharacters = countMidChar > 0
+        let multiplierMidChar = 2
+
+        if haveMiddleCharacters {
             bonusMidChar = countMidChar * multiplierMidChar
         }
     }

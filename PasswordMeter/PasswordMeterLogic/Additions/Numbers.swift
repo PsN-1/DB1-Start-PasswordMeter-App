@@ -21,18 +21,21 @@ class Numbers: AnalysisResult {
     }
     
     func calculateCountOfNumbers() {
-        let arrayOfLetters: [Character] = Array(password)
-        for letter in arrayOfLetters {
-            if letter.isNumber {
+
+        loopClosure().loop(word: password) { character in
+            if character.isNumber {
                 countNumber += 1
             }
         }
     }
 
     func calculateBonusNumber() {
-        if (countNumber > 0 && countNumber < password.count) {
-            let multiplierNumber = 4;
-            bonusNumber = countNumber * multiplierNumber;
+        let isNotOnlyNumbers = countNumber < password.count
+        let haveNumbers = countNumber > 0
+        let multiplicadorBonus = 4
+        
+        if (haveNumbers && isNotOnlyNumbers) {
+            bonusNumber = countNumber * multiplicadorBonus
         }
     }
 
