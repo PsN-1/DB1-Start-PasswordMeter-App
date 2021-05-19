@@ -9,8 +9,8 @@ import Foundation
 
 class Requirements: AnalysisResult {
     var password: String
-    private var countRequirements: Int = 0
-    private var bonusRequirements: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var requirementLevel: RequirementLevel? = RequirementLevel.EXCEPTIONAL
 
     
@@ -29,9 +29,9 @@ class Requirements: AnalysisResult {
             let minimumValue = requirement.className == "NumberOfCharacters" ? (minimumLength) : 1
             
             if (requirement.count == minimumValue) {
-                countRequirements += 1
+                count += 1
             } else if (requirement.count > minimumValue) {
-                countRequirements += 1
+                count += 1
             }
         }
     }
@@ -40,10 +40,10 @@ class Requirements: AnalysisResult {
         let bonusMultiplier = 2
         let minimumLength = 8
         let numberMinimumOfRequiredChars = password.count >= minimumLength ? 3 : 4
-        let satisfiesRequirements = countRequirements > numberMinimumOfRequiredChars
+        let satisfiesRequirements = count > numberMinimumOfRequiredChars
         
         if satisfiesRequirements {
-            bonusRequirements = countRequirements * bonusMultiplier
+            bonus = count * bonusMultiplier
         }
     }
     
@@ -51,9 +51,9 @@ class Requirements: AnalysisResult {
         let minimumLength = 8
         let numberMinimumOfRequiredChars = password.count >= minimumLength ? 4 : 5
 
-        if (countRequirements == numberMinimumOfRequiredChars) {
+        if (count == numberMinimumOfRequiredChars) {
             requirementLevel = RequirementLevel.SUFFICIENT;
-        } else if (countRequirements > numberMinimumOfRequiredChars) {
+        } else if (count > numberMinimumOfRequiredChars) {
             requirementLevel = RequirementLevel.EXCEPTIONAL;
         } else {
             requirementLevel = RequirementLevel.FAILURE;
@@ -61,6 +61,6 @@ class Requirements: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "Requirements", count: countRequirements, bonus: bonusRequirements, requirementLevel: requirementLevel!)
+        return Results(className: "Requirements", count: count, bonus: bonus, requirementLevel: requirementLevel!)
     }
 }

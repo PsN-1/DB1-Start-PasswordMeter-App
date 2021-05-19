@@ -9,8 +9,8 @@ import Foundation
 
 class MiddleNumbersOrSymbols: AnalysisResult {
     var password: String
-    var countMidChar: Int = 0
-    var bonusMidChar: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var requirementLevel: RequirementLevel?
     
     init(_ password: String) {
@@ -27,7 +27,7 @@ class MiddleNumbersOrSymbols: AnalysisResult {
 
         loopClosure().loop(word: middlePassword) { character in
             if symbols.contains(character) || numbers.contains(character) {
-                    countMidChar += 1
+                    count += 1
             }
         }
     }
@@ -40,18 +40,18 @@ class MiddleNumbersOrSymbols: AnalysisResult {
     }
     
     func calculateBonusMiddleCharacters(){
-        let haveMiddleCharacters = countMidChar > 0
+        let haveMiddleCharacters = count > 0
         let multiplierMidChar = 2
 
         if haveMiddleCharacters {
-            bonusMidChar = countMidChar * multiplierMidChar
+            bonus = count * multiplierMidChar
         }
     }
     
     func calculateRequirementLevel(){
-        if (countMidChar <= 0 ) {
+        if (count <= 0 ) {
             requirementLevel = RequirementLevel.FAILURE;
-        } else if (countMidChar == 1) {
+        } else if (count == 1) {
             requirementLevel = RequirementLevel.SUFFICIENT;
         } else {
             requirementLevel = RequirementLevel.EXCEPTIONAL;
@@ -59,6 +59,6 @@ class MiddleNumbersOrSymbols: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "MiddleNumbersOrSymbols", count: countMidChar, bonus: bonusMidChar, requirementLevel: requirementLevel!)
+        return Results(className: "MiddleNumbersOrSymbols", count: count, bonus: bonus, requirementLevel: requirementLevel!)
     }
 }

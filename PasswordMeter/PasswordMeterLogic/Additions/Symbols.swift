@@ -9,8 +9,8 @@ import Foundation
 
 class Symbols: AnalysisResult {
     var password: String
-    private var countSymbol: Int = 0
-    private var bonusSymbol: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var requirementLevel: RequirementLevel?
     
     init(_ password: String) {
@@ -25,24 +25,24 @@ class Symbols: AnalysisResult {
         
         loopClosure().loop(word: password) { character in
             if symbols.contains(character) {
-                countSymbol += 1
+                count += 1
             }
         }
     }
 
     func calculateBonusSymbol() {
         let bonusMultiplier = 6
-        let haveSymbols = countSymbol > 0
+        let haveSymbols = count > 0
 
         if haveSymbols {
-            bonusSymbol = countSymbol * bonusMultiplier
+            bonus = count * bonusMultiplier
         }
     }
 
     func calculateRequirementLevel() {
-        if (countSymbol <= 0 ) {
+        if (count <= 0 ) {
             requirementLevel = RequirementLevel.FAILURE;
-        } else if (countSymbol == 1) {
+        } else if (count == 1) {
             requirementLevel = RequirementLevel.SUFFICIENT;
         } else {
             requirementLevel = RequirementLevel.EXCEPTIONAL;
@@ -50,6 +50,6 @@ class Symbols: AnalysisResult {
     }
     
     func getResult() -> Results {
-        Results(className: "Symbols", count: countSymbol, bonus: bonusSymbol, requirementLevel: requirementLevel!)
+        Results(className: "Symbols", count: count, bonus: bonus, requirementLevel: requirementLevel!)
     }
 }

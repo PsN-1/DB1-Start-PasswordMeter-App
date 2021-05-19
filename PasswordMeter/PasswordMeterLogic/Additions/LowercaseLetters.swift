@@ -9,8 +9,8 @@ import Foundation
 
 class LowercaseLetters: AnalysisResult {
     var password: String
-    private var countAlphaLowerCase: Int = 0
-    private var bonusAlphaLowerCase: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var requirementLevel: RequirementLevel?
     
     init(_ password: String) {
@@ -23,25 +23,25 @@ class LowercaseLetters: AnalysisResult {
     func calculateCountOfLowerCaseLetter() {
         loopClosure().loop(word: password) { letter in
             if letter.isLowercase && letter.isLetter {
-                countAlphaLowerCase += 1
+                count += 1
             }
         }
     }
     
     func calculateBonusLetterLowerCase() {
-        let isNotOnlyLowercaseLetters = countAlphaLowerCase < password.count
-        let haveLowercaseLetter = countAlphaLowerCase > 0
+        let isNotOnlyLowercaseLetters = count < password.count
+        let haveLowercaseLetter = count > 0
         let multiplicadorBonus = 2
         
         if haveLowercaseLetter && isNotOnlyLowercaseLetters {
-            bonusAlphaLowerCase = (password.count - countAlphaLowerCase) * multiplicadorBonus
+            bonus = (password.count - count) * multiplicadorBonus
         }
     }
     
     func calculateRequirementLevel() {
-        if countAlphaLowerCase <= 0 {
+        if count <= 0 {
             requirementLevel = RequirementLevel.FAILURE
-        } else if countAlphaLowerCase == 1 {
+        } else if count == 1 {
             requirementLevel = RequirementLevel.SUFFICIENT
         } else {
             requirementLevel = RequirementLevel.EXCEPTIONAL
@@ -49,6 +49,6 @@ class LowercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "LowercaseLetters", count: countAlphaLowerCase, bonus: bonusAlphaLowerCase, requirementLevel: requirementLevel!)
+        return Results(className: "LowercaseLetters", count: count, bonus: bonus, requirementLevel: requirementLevel!)
     }
 }
