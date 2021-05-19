@@ -21,7 +21,6 @@ class Numbers: AnalysisResult {
     }
     
     func calculateCountOfNumbers() {
-
         loopClosure().loop(word: password) { character in
             if character.isNumber {
                 count += 1

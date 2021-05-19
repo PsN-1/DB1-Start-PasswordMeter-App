@@ -41,6 +41,6 @@ class LettersOnly: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "LettersOnly", count: countLettersOnly, bonus: bonusLettersOnly, requirementLevel: requirementLevel)
+        return Results(className: "Letters Only", count: countLettersOnly, bonus: bonusLettersOnly, requirementLevel: requirementLevel)
     }
 }

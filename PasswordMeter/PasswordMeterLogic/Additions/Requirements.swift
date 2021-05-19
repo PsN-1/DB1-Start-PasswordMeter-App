@@ -22,11 +22,11 @@ class Requirements: AnalysisResult {
     }
     
     func calculateCountOfRequirements() {
-        let arrayOfRequirementsVariables = AdditionsVariablesBuilder().getCountOfAllValuesForRequirementsCalculation(password)
+        let requirementsVariablesToCheck = AdditionsVariablesBuilder().getCountOfAllValuesForRequirementsCalculation(password)
         let minimumLength = 8
         
-        for requirement in arrayOfRequirementsVariables {
-            let minimumValue = requirement.className == "NumberOfCharacters" ? (minimumLength) : 1
+        for requirement in requirementsVariablesToCheck {
+            let minimumValue = requirement.className == "Number of Characters" ? (minimumLength) : 1
             
             if (requirement.count == minimumValue) {
                 count += 1

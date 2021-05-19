@@ -51,6 +51,6 @@ class SequentialSymbols: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "SequentialNumbers", count: countOfSequentialSymbols, bonus: bonusOfSequentialLettersSymbols, requirementLevel: requirementLevel)
+        return Results(className: "Sequential Numbers", count: countOfSequentialSymbols, bonus: bonusOfSequentialLettersSymbols, requirementLevel: requirementLevel)
     }
 }

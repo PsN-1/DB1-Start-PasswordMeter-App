@@ -55,7 +55,7 @@ class RepeatCharacters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "RepeatCharacters", count: countRepeatedCharacter, bonus: bonusRepeatedCharacter, requirementLevel: requirementLevel)
+        return Results(className: "Repeat Characters", count: countRepeatedCharacter, bonus: bonusRepeatedCharacter, requirementLevel: requirementLevel)
     }
 }
 

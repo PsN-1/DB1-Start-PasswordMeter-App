@@ -179,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				66A23F8D2651D3FE00884770 /* AdditionsVariablesBuilder.swift */,
-				66A23FBB26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift */,
 				66A23F962652277000884770 /* DeductionsVariablesBuilder.swift */,
+				66A23FBB26523E8C00884770 /* DeductionsVariablesBuilderForScore.swift */,
 			);
 			path = VariablesBuilders;
 			sourceTree = "<group>";
@@ -192,11 +192,11 @@
 				66A23F9B26522BFF00884770 /* NumbersOnly.swift */,
 				66A23F9F26522D3A00884770 /* RepeatCharacters.swift */,
 				66A23FA32652305200884770 /* ConsecutiveUppercaseLetters.swift */,
+				66A23FA7265232E200884770 /* ConsecutiveLowercaseLetters.swift */,
+				66A23FAB2652342D00884770 /* ConsecutiveNumbers.swift */,
 				66A23FAF2652353C00884770 /* SequentialLetters.swift */,
 				66A23FB326523BBC00884770 /* SequentialNumbers.swift */,
 				66A23FB726523D1A00884770 /* SequentialSymbols.swift */,
-				66A23FA7265232E200884770 /* ConsecutiveLowercaseLetters.swift */,
-				66A23FAB2652342D00884770 /* ConsecutiveNumbers.swift */,
 			);
 			path = Deductions;
 			sourceTree = "<group>";
@@ -312,8 +312,8 @@
 			children = (
 				66D6D56C264CDF0C0068445A /* NumberOfCharacters.swift */,
 				6638C5822651B2CC00A4149F /* UppercaseLetters.swift */,
-				6638C58B2651BED700A4149F /* Numbers.swift */,
 				6638C5872651BD7500A4149F /* LowercaseLetters.swift */,
+				6638C58B2651BED700A4149F /* Numbers.swift */,
 				6638C58F2651C14E00A4149F /* Symbols.swift */,
 				66A23F812651CB0F00884770 /* MiddleNumbersOrSymbols.swift */,
 				66A23F882651D35A00884770 /* Requirements.swift */,

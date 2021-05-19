@@ -51,6 +51,6 @@ class SequentialNumbers: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "SequentialNumbers", count: countOfSequentialNumbers, bonus: bonusOfSequentialNumbers, requirementLevel: requirementLevel)
+        return Results(className: "Sequential Numbers", count: countOfSequentialNumbers, bonus: bonusOfSequentialNumbers, requirementLevel: requirementLevel)
     }
 }

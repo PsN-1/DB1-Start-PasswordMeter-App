@@ -44,6 +44,6 @@ class NumberOfCharacters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "NumberOfCharacters", count: count, bonus: bonus, requirementLevel: requirementLevel)
+        return Results(className: "Number of Characters", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }

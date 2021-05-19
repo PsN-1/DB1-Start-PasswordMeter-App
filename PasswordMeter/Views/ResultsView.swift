@@ -11,8 +11,8 @@ struct ResultsView: View {
     @State var password: String
     @State private var isShowingPassword = false
     
-    var resultsAdditions: [Results]
-    var resultsDeductions: [Results]
+    var resultsOfAdditions: [Results]
+    var resultsOfDeductions: [Results]
     var score: Int
     var complexity: String
     
@@ -40,7 +40,7 @@ struct ResultsView: View {
                                 .foregroundColor(isShowingPassword ? .secondary : .blue)
                         }
                     }
-
+                    
                     HStack {
                         Text("Score: ")
                         ZStack {
@@ -51,7 +51,7 @@ struct ResultsView: View {
                             Text("\(score)%")
                                 .multilineTextAlignment(.leading)
                         }
-
+                        
                     }
                     Text("Complexity: \(complexity)")
                 }
@@ -64,22 +64,22 @@ struct ResultsView: View {
                                 Text("Bonus")
                             }
                 ) {
-                    ForEach(0..<resultsAdditions.count) { i in
+                    ForEach(0..<resultsOfAdditions.count) { i in
                         HStack{
                             
-                            Image(systemName: resultsAdditions[i].requirementLevel.rawValue)
-                                .foregroundColor(resultsAdditions[i].requirementLevel.imageColor)
-                            Text("\(resultsAdditions[i].className)")
+                            Image(systemName: resultsOfAdditions[i].requirementLevel.rawValue)
+                                .foregroundColor(resultsOfAdditions[i].requirementLevel.imageColor)
+                            Text("\(resultsOfAdditions[i].className)")
                             Spacer()
-                            Text("\(resultsAdditions[i].count)")
+                            Text("\(resultsOfAdditions[i].count)")
                             
-                            if resultsAdditions[i].bonus > 9 {
+                            if resultsOfAdditions[i].bonus > 9 {
                                 Text("  ")
                             } else {
                                 Text("    ")
                             }
                             
-                            Text("\(resultsAdditions[i].bonus)")
+                            Text("\(resultsOfAdditions[i].bonus)")
                         }
                     }
                 }
@@ -91,27 +91,27 @@ struct ResultsView: View {
                                 Text("Bonus")
                             }
                 ) {
-                    ForEach(0..<resultsDeductions.count) { i in
+                    ForEach(0..<resultsOfDeductions.count) { i in
                         HStack{
                             
-                            Image(systemName: resultsDeductions[i].requirementLevel.rawValue)
-                                .foregroundColor(resultsDeductions[i].requirementLevel.imageColor)
-                            Text("\(resultsDeductions[i].className)")
+                            Image(systemName: resultsOfDeductions[i].requirementLevel.rawValue)
+                                .foregroundColor(resultsOfDeductions[i].requirementLevel.imageColor)
+                            Text("\(resultsOfDeductions[i].className)")
                             Spacer()
-                            Text("\(resultsDeductions[i].count)")
+                            Text("\(resultsOfDeductions[i].count)")
                             
-                            if resultsDeductions[i].bonus > 9 {
+                            if resultsOfDeductions[i].bonus > 9 {
                                 Text(" ")
-                            } else if resultsDeductions[i].bonus > 0 {
-                                Text("   ")
+                            } else if resultsOfDeductions[i].bonus > 0 {
+                                Text("  ")
                             } else {
                                 Text("    ")
                             }
                             
-                            if resultsDeductions[i].bonus > 0 {
-                                Text("-\(resultsDeductions[i].bonus)")
+                            if resultsOfDeductions[i].bonus > 0 {
+                                Text("-\(resultsOfDeductions[i].bonus)")
                             } else {
-                                Text("\(resultsDeductions[i].bonus)")
+                                Text("\(resultsOfDeductions[i].bonus)")
                             }
                         }
                     }
@@ -123,6 +123,6 @@ struct ResultsView: View {
 
 struct ResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultsView(password: "12345678", resultsAdditions: [NumberOfCharacters("12345678").getResult()], resultsDeductions: [LettersOnly("4379").getResult()], score: 75, complexity: "Strong")
+        ResultsView(password: "12345678", resultsOfAdditions: [NumberOfCharacters("12345678").getResult()], resultsOfDeductions: [LettersOnly("4379").getResult()], score: 75, complexity: "Strong")
     }
 }

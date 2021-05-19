@@ -49,6 +49,6 @@ class UppercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "UppercaseLetters", count: count, bonus: bonus, requirementLevel: requirementLevel)
+        return Results(className: "Uppercase Letters", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }

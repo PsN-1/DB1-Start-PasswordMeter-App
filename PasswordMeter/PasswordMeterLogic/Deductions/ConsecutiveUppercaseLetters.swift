@@ -52,6 +52,6 @@ class ConsecutiveUppercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "ConsecutiveUppercaseLetters", count: countConsecutiveUppercaseLetters, bonus: bonusConsecutiveUppercaseLetters, requirementLevel: requirementLevel)
+        return Results(className: "Consecutive Uppercase Letters", count: countConsecutiveUppercaseLetters, bonus: bonusConsecutiveUppercaseLetters, requirementLevel: requirementLevel)
     }
 }

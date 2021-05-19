@@ -59,6 +59,6 @@ class MiddleNumbersOrSymbols: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "MiddleNumbersOrSymbols", count: count, bonus: bonus, requirementLevel: requirementLevel)
+        return Results(className: "Middle Numbers or Symbols", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }

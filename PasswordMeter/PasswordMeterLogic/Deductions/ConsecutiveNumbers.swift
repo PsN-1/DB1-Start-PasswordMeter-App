@@ -52,6 +52,6 @@ class ConsecutiveNumbers: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "ConsecutiveNumbers", count: countConsecutiveNumber, bonus: bonusConsecutiveNumber, requirementLevel: requirementLevel)
+        return Results(className: "Consecutive Numbers", count: countConsecutiveNumber, bonus: bonusConsecutiveNumber, requirementLevel: requirementLevel)
     }
 }

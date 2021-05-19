@@ -27,7 +27,7 @@ struct ContentView: View {
                             SecureField("Password", text: $passwordInput).padding()
                                 .frame(height: 55)
                         }
-
+                        
                         Button(action: {
                             isShowingPassword.toggle()
                         }) {
@@ -40,8 +40,7 @@ struct ContentView: View {
                     .cornerRadius(15)
                 }
                 Button(action: {
-                    print(passwordInput)
-                        isShowingResultsView = true
+                    isShowingResultsView = true
                 }) {
                     Text("Submit")
                         .fixedSize()
@@ -63,8 +62,8 @@ struct ContentView: View {
                 let complexity = PasswordComplexity(score).calculatePasswordComplexity()
                 ResultsView(
                     password: passwordInput,
-                    resultsAdditions: additions,
-                    resultsDeductions: deductions,
+                    resultsOfAdditions: additions,
+                    resultsOfDeductions: deductions,
                     score: score,
                     complexity: complexity
                 )

@@ -49,6 +49,6 @@ class LowercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "LowercaseLetters", count: count, bonus: bonus, requirementLevel: requirementLevel)
+        return Results(className: "Lowercase Letters", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }

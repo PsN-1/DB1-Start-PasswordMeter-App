@@ -17,7 +17,6 @@ class Score {
     }
     
     func calculateScore() {
-        
         let additions = PasswordVariablesCalculator(password).calculateAdditionsOfPasswordStrength()
         let deductions = PasswordVariablesCalculator(password).calculateDeductionsOfPasswordStrength()
         
@@ -30,9 +29,9 @@ class Score {
         }
         
         if (score > 100) {
-            score = 100;
+            score = 100
         } else if (score < 0 ) {
-            score = 0;
+            score = 0
         }
     }
     

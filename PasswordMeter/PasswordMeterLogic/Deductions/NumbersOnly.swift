@@ -41,6 +41,6 @@ class NumbersOnly: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "NumbersOnly", count: countOfNumbersOnly, bonus: bonusOfNumbersOnly, requirementLevel: requirementLevel)
+        return Results(className: "Numbers Only", count: countOfNumbersOnly, bonus: bonusOfNumbersOnly, requirementLevel: requirementLevel)
     }
 }
