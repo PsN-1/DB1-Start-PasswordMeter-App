@@ -9,15 +9,15 @@ import XCTest
 @testable import PasswordMeter
 
 class NumbersOnlyTest: XCTestCase {
-    
-    func shouldReturnZeroNumbersOnlyWithRequirementSufficient() {
+
+    func testShouldReturnZeroNumbersOnlyWithRequirementSufficient() {
         let result = NumbersOnly("asdasS").getResult()
         XCTAssertEqual(0, result.count)
         XCTAssertEqual(0, result.bonus)
         XCTAssertEqual(RequirementLevel.SUFFICIENT, result.requirementLevel)
     }
 
-    func shouldReturnDeductionNumberOnlyWithRequirementWarning() {
+    func testShouldReturnDeductionNumberOnlyWithRequirementWarning() {
         let result = NumbersOnly("123456").getResult()
         XCTAssertEqual(6, result.count)
         XCTAssertEqual(6, result.bonus)
