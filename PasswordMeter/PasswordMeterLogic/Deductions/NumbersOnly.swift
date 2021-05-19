@@ -31,7 +31,7 @@ class NumbersOnly: AnalysisResult {
     func isNumbersOnly() -> Bool {
         var isNumbersOnly = true
         
-        loopClosure().loop(word: password){ character in
+        password.forEach { character in
             if !character.isNumber {
                 isNumbersOnly = false
             }

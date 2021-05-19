@@ -21,8 +21,8 @@ class UppercaseLetters: AnalysisResult {
     }
     
     func calculateCountOfUpperCaseLetter() {
-        loopClosure().loop(word: password) { letter in
-            if letter.isUppercase && letter.isLetter {
+        password.forEach { character in
+            if character.isUppercase && character.isLetter {
                 count += 1
             }
         }

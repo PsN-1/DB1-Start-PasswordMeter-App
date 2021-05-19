@@ -31,7 +31,7 @@ class LettersOnly: AnalysisResult {
     func isLettersOnly() -> Bool {
         var isLettersOnly = true
         
-        loopClosure().loop(word: password) { character in
+        password.forEach { character in
             if !character.isLetter {
                 isLettersOnly = false
             }

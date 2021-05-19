@@ -22,10 +22,10 @@ class ConsecutiveNumbers: AnalysisResult {
     }
     
     func calculateCountOfConsecutiveNumbers() {
-        let arrayOfLetters: [Character] = Array(password)
+        let letters: [Character] = Array(password)
         
-        for i in 0..<arrayOfLetters.count {
-            if arrayOfLetters[i].isNumber {
+        for i in 0..<letters.count {
+            if letters[i].isNumber {
                 if (nTmpNumber != nil) {
                     if (nTmpNumber! + 1 == i) {
                         countConsecutiveNumber += 1

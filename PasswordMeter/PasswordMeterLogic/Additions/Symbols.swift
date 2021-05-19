@@ -23,7 +23,7 @@ class Symbols: AnalysisResult {
     func calculateCountOfSymbols() {
         let symbols = "(?=.*[!@#$&*])"
         
-        loopClosure().loop(word: password) { character in
+        password.forEach { character in
             if symbols.contains(character) {
                 count += 1
             }

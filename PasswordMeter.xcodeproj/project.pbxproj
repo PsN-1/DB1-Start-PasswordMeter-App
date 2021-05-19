@@ -52,7 +52,7 @@
 		66B28ADB264CC685003BF76B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B28AD9264CC685003BF76B /* LaunchScreen.storyboard */; };
 		66B28AE6264CC685003BF76B /* PasswordMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AE5264CC685003BF76B /* PasswordMeterTests.swift */; };
 		66B28AF1264CC685003BF76B /* PasswordMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B28AF0264CC685003BF76B /* PasswordMeterUITests.swift */; };
-		66BCD417265485D1009CAE22 /* loopClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BCD416265485D1009CAE22 /* loopClosure.swift */; };
+		66BCD417265485D1009CAE22 /* StringForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BCD416265485D1009CAE22 /* StringForEach.swift */; };
 		66C6191826540812006FD37A /* PasswordComplexityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C6191726540812006FD37A /* PasswordComplexityTest.swift */; };
 		66D6D564264CD5730068445A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D563264CD5730068445A /* ResultsView.swift */; };
 		66D6D568264CDD420068445A /* AnalysisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D6D567264CDD420068445A /* AnalysisResult.swift */; };
@@ -131,7 +131,7 @@
 		66B28AEC264CC685003BF76B /* PasswordMeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B28AF0264CC685003BF76B /* PasswordMeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMeterUITests.swift; sourceTree = "<group>"; };
 		66B28AF2264CC685003BF76B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66BCD416265485D1009CAE22 /* loopClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loopClosure.swift; sourceTree = "<group>"; };
+		66BCD416265485D1009CAE22 /* StringForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringForEach.swift; sourceTree = "<group>"; };
 		66C6191726540812006FD37A /* PasswordComplexityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordComplexityTest.swift; sourceTree = "<group>"; };
 		66D6D563264CD5730068445A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		66D6D567264CDD420068445A /* AnalysisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResult.swift; sourceTree = "<group>"; };
@@ -173,6 +173,14 @@
 				66D6D563264CD5730068445A /* ResultsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6698E6C8265563DB0027FDF0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				66BCD416265485D1009CAE22 /* StringForEach.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		66A23F8C2651D3E600884770 /* VariablesBuilders */ = {
@@ -288,7 +296,6 @@
 				66D6D567264CDD420068445A /* AnalysisResult.swift */,
 				66EDA241265191F900165943 /* Results.swift */,
 				66D6D569264CDDE30068445A /* RequirementLevel.swift */,
-				66BCD416265485D1009CAE22 /* loopClosure.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 		66D6D565264CDB700068445A /* PasswordMeterLogic */ = {
 			isa = PBXGroup;
 			children = (
+				6698E6C8265563DB0027FDF0 /* Extension */,
 				66C6191B26540CCF006FD37A /* Models */,
 				66D6D56B264CDEEE0068445A /* Additions */,
 				66A23F912652255A00884770 /* Deductions */,
@@ -478,7 +486,7 @@
 				66A23FA8265232E200884770 /* ConsecutiveLowercaseLetters.swift in Sources */,
 				66D6D564264CD5730068445A /* ResultsView.swift in Sources */,
 				66A23FB426523BBC00884770 /* SequentialNumbers.swift in Sources */,
-				66BCD417265485D1009CAE22 /* loopClosure.swift in Sources */,
+				66BCD417265485D1009CAE22 /* StringForEach.swift in Sources */,
 				66B28AD1264CC682003BF76B /* SceneDelegate.swift in Sources */,
 				66A23F822651CB0F00884770 /* MiddleNumbersOrSymbols.swift in Sources */,
 				66A23FBE26523FBE00884770 /* Score.swift in Sources */,

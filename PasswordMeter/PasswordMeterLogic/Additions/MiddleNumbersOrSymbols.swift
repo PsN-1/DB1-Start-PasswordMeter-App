@@ -25,7 +25,7 @@ class MiddleNumbersOrSymbols: AnalysisResult {
         let numbers = "1234567890"
         let middlePassword = removeFirstAndLastCharacters(from: password)
 
-        loopClosure().loop(word: middlePassword) { character in
+        middlePassword.forEach { character in
             if symbols.contains(character) || numbers.contains(character) {
                     count += 1
             }

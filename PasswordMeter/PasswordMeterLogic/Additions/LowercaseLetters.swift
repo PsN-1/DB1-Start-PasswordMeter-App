@@ -21,8 +21,8 @@ class LowercaseLetters: AnalysisResult {
     }
     
     func calculateCountOfLowerCaseLetter() {
-        loopClosure().loop(word: password) { letter in
-            if letter.isLowercase && letter.isLetter {
+        password.forEach { character in
+            if character.isLetter && character.isLowercase {
                 count += 1
             }
         }

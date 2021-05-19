@@ -22,19 +22,19 @@ class RepeatCharacters: AnalysisResult {
     }
     
     func calculateCountOfRepeatedCharacters() {
-        let arrayOfLetters: [Character] = Array(password)
+        let letters: [Character] = Array(password)
         
-        for i in 0..<arrayOfLetters.count {
+        for i in 0..<letters.count {
             var bCharExists = false
-            for j in 0..<arrayOfLetters.count {
-                if arrayOfLetters[i] == arrayOfLetters[j] && i != j {
+            for j in 0..<letters.count {
+                if letters[i] == letters[j] && i != j {
                     bCharExists = true
-                    incrementDeductionOfRepeatedChars += Double(abs(Double(arrayOfLetters.count) / ( Double(j) - Double(i)) ))
+                    incrementDeductionOfRepeatedChars += Double(abs(Double(letters.count) / ( Double(j) - Double(i)) ))
                 }
             }
             if bCharExists {
                 count += 1
-                let countUniqueCharacters = arrayOfLetters.count - count
+                let countUniqueCharacters = letters.count - count
                 incrementDeductionOfRepeatedChars = (countUniqueCharacters != 0) ? ceil(incrementDeductionOfRepeatedChars / Double(countUniqueCharacters)) : ceil(incrementDeductionOfRepeatedChars)
             }
         }
