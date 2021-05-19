@@ -26,7 +26,8 @@ class Requirements: AnalysisResult {
         let minimumLength = 8
         
         for requirement in requirementsVariablesToCheck {
-            let minimumValue = requirement.className == "Number of Characters" ? (minimumLength) : 1
+            let isClassNumberOfCharacters = requirement.className == "Number of Characters"
+            let minimumValue = isClassNumberOfCharacters ? minimumLength : 1
             
             if (requirement.count == minimumValue) {
                 count += 1
@@ -49,11 +50,11 @@ class Requirements: AnalysisResult {
     
     func calculateRequirementLevel() {
         let minimumLength = 8
-        let numberMinimumOfRequiredChars = password.count >= minimumLength ? 4 : 5
+        let minimumNumberOfRequiredChars = password.count >= minimumLength ? 4 : 5
 
-        if (count == numberMinimumOfRequiredChars) {
+        if count == minimumNumberOfRequiredChars {
             requirementLevel = RequirementLevel.SUFFICIENT;
-        } else if (count > numberMinimumOfRequiredChars) {
+        } else if (count > minimumNumberOfRequiredChars) {
             requirementLevel = RequirementLevel.EXCEPTIONAL;
         } else {
             requirementLevel = RequirementLevel.FAILURE;
