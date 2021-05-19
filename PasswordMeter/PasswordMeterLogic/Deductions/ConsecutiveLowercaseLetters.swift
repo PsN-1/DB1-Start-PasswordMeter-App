@@ -12,7 +12,7 @@ class ConsecutiveLowercaseLetters: AnalysisResult {
     private var countConsecutiveLowercaseLetters: Int = 0
     private var bonusConsecutiveLowercaseLetters: Int = 0
     private var nTmpAlphaLC: Int? = nil
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -52,6 +52,6 @@ class ConsecutiveLowercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "ConsecutiveLowercaseLetters", count: countConsecutiveLowercaseLetters, bonus: bonusConsecutiveLowercaseLetters, requirementLevel: requirementLevel!)
+        return Results(className: "ConsecutiveLowercaseLetters", count: countConsecutiveLowercaseLetters, bonus: bonusConsecutiveLowercaseLetters, requirementLevel: requirementLevel)
     }
 }

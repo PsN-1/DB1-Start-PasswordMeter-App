@@ -12,7 +12,7 @@ class ConsecutiveNumbers: AnalysisResult {
     private var countConsecutiveNumber: Int = 0
     private var bonusConsecutiveNumber: Int = 0
     private var nTmpNumber: Int? = nil
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -52,6 +52,6 @@ class ConsecutiveNumbers: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "ConsecutiveNumbers", count: countConsecutiveNumber, bonus: bonusConsecutiveNumber, requirementLevel: requirementLevel!)
+        return Results(className: "ConsecutiveNumbers", count: countConsecutiveNumber, bonus: bonusConsecutiveNumber, requirementLevel: requirementLevel)
     }
 }

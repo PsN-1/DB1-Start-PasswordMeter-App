@@ -12,7 +12,7 @@ class ConsecutiveUppercaseLetters: AnalysisResult {
     private var countConsecutiveUppercaseLetters: Int = 0
     private var bonusConsecutiveUppercaseLetters: Int = 0
     private var nTmpAlphaUC: Int? = nil
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -52,6 +52,6 @@ class ConsecutiveUppercaseLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "ConsecutiveUppercaseLetters", count: countConsecutiveUppercaseLetters, bonus: bonusConsecutiveUppercaseLetters, requirementLevel: requirementLevel!)
+        return Results(className: "ConsecutiveUppercaseLetters", count: countConsecutiveUppercaseLetters, bonus: bonusConsecutiveUppercaseLetters, requirementLevel: requirementLevel)
     }
 }

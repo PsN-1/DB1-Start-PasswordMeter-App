@@ -11,7 +11,7 @@ class LettersOnly: AnalysisResult {
     var password: String
     private var countLettersOnly: Int = 0
     private var bonusLettersOnly: Int = 0
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -41,6 +41,6 @@ class LettersOnly: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "LettersOnly", count: countLettersOnly, bonus: bonusLettersOnly, requirementLevel: requirementLevel!)
+        return Results(className: "LettersOnly", count: countLettersOnly, bonus: bonusLettersOnly, requirementLevel: requirementLevel)
     }
 }

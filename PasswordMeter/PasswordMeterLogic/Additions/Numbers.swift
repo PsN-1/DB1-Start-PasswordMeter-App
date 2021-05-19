@@ -11,7 +11,7 @@ class Numbers: AnalysisResult {
     var password: String
     private var count: Int = 0
     private var bonus: Int = 0
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -50,6 +50,6 @@ class Numbers: AnalysisResult {
     }
     
     func getResult() -> Results {
-        Results(className: "Numbers", count: count, bonus: bonus, requirementLevel: requirementLevel!)
+        Results(className: "Numbers", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }

@@ -11,7 +11,7 @@ class SequentialLetters: AnalysisResult {
     var password: String
     private var countOfSequentialLetters: Int = 0
     private var bonusOfSequentialLetters: Int = 0
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -51,6 +51,6 @@ class SequentialLetters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "SequentialLetters", count: countOfSequentialLetters, bonus: bonusOfSequentialLetters, requirementLevel: requirementLevel!)
+        return Results(className: "SequentialLetters", count: countOfSequentialLetters, bonus: bonusOfSequentialLetters, requirementLevel: requirementLevel)
     }
 }

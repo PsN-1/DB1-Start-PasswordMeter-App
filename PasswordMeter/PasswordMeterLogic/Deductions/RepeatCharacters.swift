@@ -12,7 +12,7 @@ class RepeatCharacters: AnalysisResult {
     private var countRepeatedCharacter: Int = 0
     private var bonusRepeatedCharacter: Int = 0
     private var incrementDeductionOfRepeatedChars: Double = 0
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -55,7 +55,7 @@ class RepeatCharacters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "RepeatCharacters", count: countRepeatedCharacter, bonus: bonusRepeatedCharacter, requirementLevel: requirementLevel!)
+        return Results(className: "RepeatCharacters", count: countRepeatedCharacter, bonus: bonusRepeatedCharacter, requirementLevel: requirementLevel)
     }
 }
 

@@ -11,7 +11,7 @@ class MiddleNumbersOrSymbols: AnalysisResult {
     var password: String
     private var count: Int = 0
     private var bonus: Int = 0
-    private var requirementLevel: RequirementLevel?
+    private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
@@ -59,6 +59,6 @@ class MiddleNumbersOrSymbols: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "MiddleNumbersOrSymbols", count: count, bonus: bonus, requirementLevel: requirementLevel!)
+        return Results(className: "MiddleNumbersOrSymbols", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }
