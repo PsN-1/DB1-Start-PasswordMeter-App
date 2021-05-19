@@ -9,9 +9,9 @@ import Foundation
 
 class ConsecutiveNumbers: AnalysisResult {
     var password: String
-    private var countConsecutiveNumber: Int = 0
-    private var bonusConsecutiveNumber: Int = 0
-    private var nTmpNumber: Int? = nil
+    private var count: Int = 0
+    private var bonus: Int = 0
+    private var indexOfNumberCharacter: Int?
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
@@ -24,27 +24,27 @@ class ConsecutiveNumbers: AnalysisResult {
     func calculateCountOfConsecutiveNumbers() {
         let letters: [Character] = Array(password)
         
-        for i in 0..<letters.count {
-            if letters[i].isNumber {
-                if (nTmpNumber != nil) {
-                    if (nTmpNumber! + 1 == i) {
-                        countConsecutiveNumber += 1
+        for currentCharacter in 0..<letters.count {
+            if letters[currentCharacter].isNumber {
+                if let indexOfPreviousNumberCharacter = indexOfNumberCharacter {
+                    if (indexOfPreviousNumberCharacter + 1 == currentCharacter) {
+                        count += 1
                     }
                 }
-                nTmpNumber = i
+                indexOfNumberCharacter = currentCharacter
             }
         }
     }
     
     func calculateBonusOfConsecutiveNumbers() {
-        if (countConsecutiveNumber > 0) {
-            let multiplierConsecutiveNumber = 2
-            bonusConsecutiveNumber = countConsecutiveNumber * multiplierConsecutiveNumber;
+        let bonusMultiplier = 2
+        if count > 0 {
+            bonus = count * bonusMultiplier
         }
     }
     
     func calculateRequirementLevel() {
-        if (countConsecutiveNumber > 0) {
+        if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {
             requirementLevel = RequirementLevel.SUFFICIENT
@@ -52,6 +52,6 @@ class ConsecutiveNumbers: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "Consecutive Numbers", count: countConsecutiveNumber, bonus: bonusConsecutiveNumber, requirementLevel: requirementLevel)
+        return Results(className: "Consecutive Numbers", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }

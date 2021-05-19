@@ -9,8 +9,8 @@ import Foundation
 
 class SequentialSymbols: AnalysisResult {
     var password: String
-    private var countOfSequentialSymbols: Int = 0
-    private var bonusOfSequentialLettersSymbols: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
@@ -21,29 +21,31 @@ class SequentialSymbols: AnalysisResult {
     }
     
     func calculateCountOfSequentialSymbols() {
-        for i in 0..<8 {
-            let Symbols = ")!@#$%^&*()"
-            let arraySymbols = Array(Symbols)
-            var sFwd = ""
-            for j in i..<i+3 {
-                sFwd += "\(arraySymbols[j])"
+        let symbols = Array(")!@#$%^&*()")
+        let sizeOfGroup = 3
+        
+        for i in 0..<(symbols.count - sizeOfGroup) {
+            var groupOfCharacters = ""
+            for j in i ..< (i + sizeOfGroup) {
+                groupOfCharacters += "\(symbols[j])"
             }
-            let sRev = String(sFwd.reversed())
-            if password.lowercased().contains(sFwd) || password.lowercased().contains(sRev) {
-                countOfSequentialSymbols += 1
+            let groupOfCharactersReversed = String(groupOfCharacters.reversed())
+            
+            if password.lowercased().contains(groupOfCharacters) || password.lowercased().contains(groupOfCharactersReversed) {
+                count += 1
             }
         }
     }
     
     func calculateBonusOfSequentialSymbols() {
-        if (countOfSequentialSymbols > 0) {
-            let multiplierSeqSymbol = 3
-            bonusOfSequentialLettersSymbols = countOfSequentialSymbols * multiplierSeqSymbol;
+        let bonusMultipler = 3
+        if count > 0 {
+            bonus = count * bonusMultipler
         }
     }
     
     func calculateRequirementLevel() {
-        if (countOfSequentialSymbols > 0) {
+        if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {
             requirementLevel = RequirementLevel.SUFFICIENT
@@ -51,6 +53,6 @@ class SequentialSymbols: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "Sequential Numbers", count: countOfSequentialSymbols, bonus: bonusOfSequentialLettersSymbols, requirementLevel: requirementLevel)
+        return Results(className: "Sequential Numbers", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }
