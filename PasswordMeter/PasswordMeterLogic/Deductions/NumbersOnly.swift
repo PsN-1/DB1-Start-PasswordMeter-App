@@ -21,11 +21,23 @@ class NumbersOnly: AnalysisResult {
     }
     
     func calculateCountOfNumbersOnly() {
-        let arrayOfRequirementsVariables = DeductionsVariablesBuilder().getCountOfAllValuesForRequirementsCalculation(password)
+        let numberOfCharacters = NumberOfCharacters(password).getResult().count
         
-        if (arrayOfRequirementsVariables["LowercaseLetters"]!.count == 0 && arrayOfRequirementsVariables["UppercaseLetters"]!.count == 0) && arrayOfRequirementsVariables["Symbols"]!.count == 0 && arrayOfRequirementsVariables["Numbers"]!.count > 0 {
-            countOfNumbersOnly = arrayOfRequirementsVariables["NumberOfCharacters"]!.count
+        if isNumbersOnly(){
+            count = numberOfCharacters
         }
+    }
+    
+    func isNumbersOnly() -> Bool {
+        var isNumbersOnly = true
+        
+        loopClosure().loop(word: password){ character in
+            if !character.isNumber {
+                isNumbersOnly = false
+            }
+        }
+        
+        return isNumbersOnly
     }
     
     func calculateBonusOfNumbersOnly() {
