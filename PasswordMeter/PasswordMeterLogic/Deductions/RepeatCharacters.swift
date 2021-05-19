@@ -9,8 +9,8 @@ import Foundation
 
 class RepeatCharacters: AnalysisResult {
     var password: String
-    private var countRepeatedCharacter: Int = 0
-    private var bonusRepeatedCharacter: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var incrementDeductionOfRepeatedChars: Double = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
@@ -33,21 +33,21 @@ class RepeatCharacters: AnalysisResult {
                 }
             }
             if bCharExists {
-                countRepeatedCharacter += 1
-                let countUniqueCharacters = arrayOfLetters.count - countRepeatedCharacter
+                count += 1
+                let countUniqueCharacters = arrayOfLetters.count - count
                 incrementDeductionOfRepeatedChars = (countUniqueCharacters != 0) ? ceil(incrementDeductionOfRepeatedChars / Double(countUniqueCharacters)) : ceil(incrementDeductionOfRepeatedChars)
             }
         }
     }
     
     func calculateBonusOfRepeatedCharacters() {
-        if (countRepeatedCharacter > 0) {
-            bonusRepeatedCharacter = Int(incrementDeductionOfRepeatedChars)
+        if (count > 0) {
+            bonus = Int(incrementDeductionOfRepeatedChars)
         }
     }
     
     func calculateRequirementLevel() {
-        if (countRepeatedCharacter > 0) {
+        if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {
             requirementLevel = RequirementLevel.SUFFICIENT
@@ -55,7 +55,7 @@ class RepeatCharacters: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "Repeat Characters", count: countRepeatedCharacter, bonus: bonusRepeatedCharacter, requirementLevel: requirementLevel)
+        return Results(className: "Repeat Characters", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }
 
