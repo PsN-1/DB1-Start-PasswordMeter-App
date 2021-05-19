@@ -9,8 +9,8 @@ import Foundation
 
 class NumbersOnly: AnalysisResult {
     var password: String
-    private var countOfNumbersOnly: Int = 0
-    private var bonusOfNumbersOnly: Int = 0
+    private var count: Int = 0
+    private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
@@ -29,11 +29,11 @@ class NumbersOnly: AnalysisResult {
     }
     
     func calculateBonusOfNumbersOnly() {
-        bonusOfNumbersOnly = countOfNumbersOnly
+        bonus = count
     }
     
     func calculateRequirementLevel() {
-        if (countOfNumbersOnly > 0) {
+        if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {
             requirementLevel = RequirementLevel.SUFFICIENT
@@ -41,6 +41,6 @@ class NumbersOnly: AnalysisResult {
     }
     
     func getResult() -> Results {
-        return Results(className: "Numbers Only", count: countOfNumbersOnly, bonus: bonusOfNumbersOnly, requirementLevel: requirementLevel)
+        return Results(className: "Numbers Only", count: count, bonus: bonus, requirementLevel: requirementLevel)
     }
 }
