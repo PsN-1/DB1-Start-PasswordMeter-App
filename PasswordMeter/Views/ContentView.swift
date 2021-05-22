@@ -55,18 +55,8 @@ struct ContentView: View {
             .padding()
             .navigationBarTitle("Password Meter")
             .sheet(isPresented: $isShowingResultsView) {
-                
-                let additions = PasswordVariablesCalculator(passwordInput).calculateAdditionsOfPasswordStrength()
-                let deductions = PasswordVariablesCalculator(passwordInput).calculateDeductionsOfPasswordStrength()
-                let score = Score(passwordInput).getScore()
-                let complexity = PasswordComplexity(score).calculatePasswordComplexity()
-                ResultsView(
-                    password: passwordInput,
-                    resultsOfAdditions: additions,
-                    resultsOfDeductions: deductions,
-                    score: score,
-                    complexity: complexity
-                )
+                let vc = ViewController(passwordInput)
+                vc.returnView()
             }
         }
     }

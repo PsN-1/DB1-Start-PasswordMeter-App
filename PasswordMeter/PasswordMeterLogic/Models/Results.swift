@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Results {
+struct Results: Equatable {
     var className: String
     var count: Int
     var bonus: Int
