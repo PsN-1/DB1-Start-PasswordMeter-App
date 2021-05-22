@@ -34,6 +34,7 @@ class NumbersOnly: AnalysisResult {
         password.forEach { character in
             if !character.isNumber {
                 isNumbersOnly = false
+                return
             }
         }
         

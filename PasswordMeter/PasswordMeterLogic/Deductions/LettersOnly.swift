@@ -34,6 +34,7 @@ class LettersOnly: AnalysisResult {
         password.forEach { character in
             if !character.isLetter {
                 isLettersOnly = false
+                return
             }
         }
         
