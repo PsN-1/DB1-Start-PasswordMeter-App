@@ -37,4 +37,25 @@ class MiddleNumbersOrSymbolsTest: XCTestCase {
         XCTAssertEqual(6, result.bonus)
         XCTAssertEqual(RequirementLevel.EXCEPTIONAL, result.requirementLevel)
     }
+    
+    func test2() {
+        let result = MiddleNumbersOrSymbols("111").getResult()
+        XCTAssertEqual(1, result.count)
+        XCTAssertEqual(2, result.bonus)
+        XCTAssertEqual(RequirementLevel.SUFFICIENT, result.requirementLevel)
+    }
+    
+    func test3(){
+        let result = MiddleNumbersOrSymbols("11").getResult()
+        XCTAssertEqual(0, result.count)
+        XCTAssertEqual(0, result.bonus)
+        XCTAssertEqual(RequirementLevel.FAILURE, result.requirementLevel)
+    }
+    
+    func test4(){
+        let result = MiddleNumbersOrSymbols("1").getResult()
+        XCTAssertEqual(0, result.count)
+        XCTAssertEqual(0, result.bonus)
+        XCTAssertEqual(RequirementLevel.FAILURE, result.requirementLevel)
+    }
 }
