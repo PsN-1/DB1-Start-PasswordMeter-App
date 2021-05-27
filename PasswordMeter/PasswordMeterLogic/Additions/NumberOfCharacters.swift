@@ -8,7 +8,7 @@
 import Foundation
 
 class NumberOfCharacters: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE

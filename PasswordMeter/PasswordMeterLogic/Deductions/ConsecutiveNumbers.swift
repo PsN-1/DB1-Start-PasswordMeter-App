@@ -8,7 +8,7 @@
 import Foundation
 
 class ConsecutiveNumbers: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var indexOfNumberCharacter: Int?
@@ -21,7 +21,7 @@ class ConsecutiveNumbers: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfConsecutiveNumbers() {
+    private func calculateCountOfConsecutiveNumbers() {
         let letters: [Character] = Array(password)
         
         for currentCharacter in 0..<letters.count {
@@ -36,14 +36,14 @@ class ConsecutiveNumbers: AnalysisResult {
         }
     }
     
-    func calculateBonusOfConsecutiveNumbers() {
+    private func calculateBonusOfConsecutiveNumbers() {
         let bonusMultiplier = 2
         if count > 0 {
             bonus = count * bonusMultiplier
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {

@@ -8,7 +8,7 @@
 import Foundation
 
 class Requirements: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -21,7 +21,7 @@ class Requirements: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfRequirements() {
+    private func calculateCountOfRequirements() {
         let requirementsVariablesToCheck = AdditionsVariablesBuilder().getCountOfAllValuesForRequirementsCalculation(password)
         let minimumLength = 8
         
@@ -37,7 +37,7 @@ class Requirements: AnalysisResult {
         }
     }
     
-    func calculateBonusOfRequirements() {
+    private func calculateBonusOfRequirements() {
         let bonusMultiplier = 2
         let minimumLength = 8
         let numberMinimumOfRequiredChars = password.count >= minimumLength ? 3 : 4
@@ -48,7 +48,7 @@ class Requirements: AnalysisResult {
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         let minimumLength = 8
         let minimumNumberOfRequiredChars = password.count >= minimumLength ? 4 : 5
 

@@ -8,7 +8,7 @@
 import Foundation
 
 class SequentialSymbols: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class SequentialSymbols: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfSequentialSymbols() {
+    private func calculateCountOfSequentialSymbols() {
         let symbols = Array(")!@#$%^&*()")
         let sizeOfGroup = 3
         
@@ -37,14 +37,14 @@ class SequentialSymbols: AnalysisResult {
         }
     }
     
-    func calculateBonusOfSequentialSymbols() {
+    private func calculateBonusOfSequentialSymbols() {
         let bonusMultipler = 3
         if count > 0 {
             bonus = count * bonusMultipler
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {

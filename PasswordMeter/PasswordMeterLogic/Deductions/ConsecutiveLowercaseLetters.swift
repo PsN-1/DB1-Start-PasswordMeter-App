@@ -8,7 +8,7 @@
 import Foundation
 
 class ConsecutiveLowercaseLetters: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var indexOfLowercaseLetter: Int?
@@ -21,7 +21,7 @@ class ConsecutiveLowercaseLetters: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfConsecutiveLowerCaseLetters() {
+    private func calculateCountOfConsecutiveLowerCaseLetters() {
         let letters: [Character] = Array(password)
         
         for currentLetter in 0..<letters.count {
@@ -36,7 +36,7 @@ class ConsecutiveLowercaseLetters: AnalysisResult {
         }
     }
     
-    func calculateBonusOfConsecutiveLowerCaseLetters() {
+    private func calculateBonusOfConsecutiveLowerCaseLetters() {
         let bonusMultiplier = 2
 
         if count > 0 {
@@ -44,7 +44,7 @@ class ConsecutiveLowercaseLetters: AnalysisResult {
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {

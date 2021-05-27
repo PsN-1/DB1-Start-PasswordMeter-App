@@ -8,7 +8,7 @@
 import Foundation
 
 class RepeatCharacters: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var incrementDeductionOfRepeatedChars: Double = 0
@@ -21,7 +21,7 @@ class RepeatCharacters: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfRepeatedCharacters() {
+    private func calculateCountOfRepeatedCharacters() {
         let letters: [Character] = Array(password)
         
         for i in 0..<letters.count {
@@ -40,13 +40,13 @@ class RepeatCharacters: AnalysisResult {
         }
     }
     
-    func calculateBonusOfRepeatedCharacters() {
+    private func calculateBonusOfRepeatedCharacters() {
         if (count > 0) {
             bonus = Int(incrementDeductionOfRepeatedChars)
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {

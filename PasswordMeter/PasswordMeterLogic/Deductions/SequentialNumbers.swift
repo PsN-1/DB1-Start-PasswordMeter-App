@@ -8,7 +8,7 @@
 import Foundation
 
 class SequentialNumbers: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class SequentialNumbers: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfSequentialNumbers() {
+    private func calculateCountOfSequentialNumbers() {
         let digits = Array("01234567890")
         let sizeOfGroup = 3
         
@@ -37,14 +37,14 @@ class SequentialNumbers: AnalysisResult {
         }
     }
     
-    func calculateBonusOfSequentialNumbers() {
+    private func calculateBonusOfSequentialNumbers() {
         let bonusMultiplier = 3
         if count > 0 {
             bonus = count * bonusMultiplier
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {

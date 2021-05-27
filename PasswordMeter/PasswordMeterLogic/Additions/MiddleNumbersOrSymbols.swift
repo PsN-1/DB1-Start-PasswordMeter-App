@@ -8,7 +8,7 @@
 import Foundation
 
 class MiddleNumbersOrSymbols: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class MiddleNumbersOrSymbols: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfMiddleCharacters(){
+    private func calculateCountOfMiddleCharacters(){
         let symbols = "(?=.*[!@#$&%*^]`~;:{}),/|\\"
         let numbers = "1234567890"
         let middlePassword = removeFirstAndLastCharacters(from: password)
@@ -32,14 +32,14 @@ class MiddleNumbersOrSymbols: AnalysisResult {
         }
     }
     
-    func removeFirstAndLastCharacters(from password: String) -> String {
+    private func removeFirstAndLastCharacters(from password: String) -> String {
         let ignoreTheFirstLetter = password.dropFirst()
         let ignoreTheLastLetter = ignoreTheFirstLetter.dropLast()
         
         return String(ignoreTheLastLetter)
     }
     
-    func calculateBonusMiddleCharacters(){
+    private func calculateBonusMiddleCharacters(){
         let haveMiddleCharacters = count > 0
         let multiplierMidChar = 2
 
@@ -48,7 +48,7 @@ class MiddleNumbersOrSymbols: AnalysisResult {
         }
     }
     
-    func calculateRequirementLevel(){
+    private func calculateRequirementLevel(){
         if (count <= 0 ) {
             requirementLevel = RequirementLevel.FAILURE;
         } else if (count == 1) {

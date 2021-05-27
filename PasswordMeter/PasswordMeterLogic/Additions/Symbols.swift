@@ -8,7 +8,7 @@
 import Foundation
 
 class Symbols: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class Symbols: AnalysisResult {
         calculateRequirementLevel();
     }
     
-    func calculateCountOfSymbols() {
+    private func calculateCountOfSymbols() {
         let symbols = "(?=.*[!@#$&*])"
         
         password.forEach { character in
@@ -30,7 +30,7 @@ class Symbols: AnalysisResult {
         }
     }
 
-    func calculateBonusSymbol() {
+    private func calculateBonusSymbol() {
         let bonusMultiplier = 6
         let haveSymbols = count > 0
 
@@ -39,7 +39,7 @@ class Symbols: AnalysisResult {
         }
     }
 
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count <= 0 ) {
             requirementLevel = RequirementLevel.FAILURE;
         } else if (count == 1) {

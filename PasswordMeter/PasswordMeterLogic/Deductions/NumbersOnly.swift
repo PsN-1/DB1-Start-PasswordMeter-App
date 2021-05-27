@@ -8,7 +8,7 @@
 import Foundation
 
 class NumbersOnly: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class NumbersOnly: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfNumbersOnly() {
+    private func calculateCountOfNumbersOnly() {
         let numberOfCharacters = NumberOfCharacters(password).getResult().count
         
         if isNumbersOnly(){
@@ -28,7 +28,7 @@ class NumbersOnly: AnalysisResult {
         }
     }
     
-    func isNumbersOnly() -> Bool {
+    private func isNumbersOnly() -> Bool {
         var isNumbersOnly = true
         
         password.forEach { character in
@@ -41,11 +41,11 @@ class NumbersOnly: AnalysisResult {
         return isNumbersOnly
     }
     
-    func calculateBonusOfNumbersOnly() {
+    private func calculateBonusOfNumbersOnly() {
         bonus = count
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count > 0) {
             requirementLevel = RequirementLevel.WARNING
         } else {

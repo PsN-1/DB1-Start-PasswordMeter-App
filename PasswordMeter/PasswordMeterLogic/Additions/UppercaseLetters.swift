@@ -8,7 +8,7 @@
 import Foundation
 
 class UppercaseLetters: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class UppercaseLetters: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfUpperCaseLetter() {
+    private func calculateCountOfUpperCaseLetter() {
         password.forEach { character in
             if character.isUppercase && character.isLetter {
                 count += 1
@@ -28,7 +28,7 @@ class UppercaseLetters: AnalysisResult {
         }
     }
     
-    func calculateBonusLetterUpperCase() {
+    private func calculateBonusLetterUpperCase() {
         let isNotOnlyUppercaseLetters = count < password.count
         let haveUppercaseLetter = count > 0
         let multiplicadorBonus = 2
@@ -38,7 +38,7 @@ class UppercaseLetters: AnalysisResult {
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if count <= 0 {
             requirementLevel = RequirementLevel.FAILURE
         } else if count == 1 {

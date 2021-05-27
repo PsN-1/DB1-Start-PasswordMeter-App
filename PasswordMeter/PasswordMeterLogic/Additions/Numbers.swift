@@ -8,19 +8,19 @@
 import Foundation
 
 class Numbers: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
     
     init(_ password: String) {
         self.password = password
-        calculateCountOfNumbers();
-        calculateBonusNumber();
-        calculateRequirementLevel();
+        calculateCountOfNumbers()
+        calculateBonusNumber()
+        calculateRequirementLevel()
     }
     
-    func calculateCountOfNumbers() {
+    private func calculateCountOfNumbers() {
         password.forEach { character in
             if character.isNumber {
                 count += 1
@@ -28,7 +28,7 @@ class Numbers: AnalysisResult {
         }
     }
 
-    func calculateBonusNumber() {
+    private func calculateBonusNumber() {
         let isNotOnlyNumbers = count < password.count
         let haveNumbers = count > 0
         let multiplicadorBonus = 4
@@ -38,13 +38,13 @@ class Numbers: AnalysisResult {
         }
     }
 
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if (count <= 0 ) {
-            requirementLevel = RequirementLevel.FAILURE;
+            requirementLevel = RequirementLevel.FAILURE
         } else if (count == 1) {
-            requirementLevel = RequirementLevel.SUFFICIENT;
+            requirementLevel = RequirementLevel.SUFFICIENT
         } else {
-            requirementLevel = RequirementLevel.EXCEPTIONAL;
+            requirementLevel = RequirementLevel.EXCEPTIONAL
         }
     }
     

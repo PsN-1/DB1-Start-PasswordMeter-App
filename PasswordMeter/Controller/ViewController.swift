@@ -19,7 +19,7 @@ class ViewController {
         setUpValuesForResultView()
     }
     
-    func setUpValuesForResultView() {
+    private func setUpValuesForResultView() {
         let variablesCalculator = PasswordVariablesCalculator(password)
         
         additions = variablesCalculator.calculateAdditionsOfPasswordStrength()

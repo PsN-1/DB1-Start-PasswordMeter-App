@@ -8,7 +8,7 @@
 import Foundation
 
 class SequentialLetters: AnalysisResult {
-    var password: String
+    internal var password: String
     private var count: Int = 0
     private var bonus: Int = 0
     private var requirementLevel: RequirementLevel = RequirementLevel.FAILURE
@@ -20,7 +20,7 @@ class SequentialLetters: AnalysisResult {
         calculateRequirementLevel()
     }
     
-    func calculateCountOfSequentialLetters() {
+    private func calculateCountOfSequentialLetters() {
         let letters = Array("abcdefghijklmnopqrstuvwxyz")
         let sizeOfGroup = 3
         
@@ -37,14 +37,14 @@ class SequentialLetters: AnalysisResult {
         }
     }
     
-    func calculateBonusOfSequentialLetters() {
+    private func calculateBonusOfSequentialLetters() {
         let bonusMultiplier = 3
         if count > 0 {
             bonus = count * bonusMultiplier
         }
     }
     
-    func calculateRequirementLevel() {
+    private func calculateRequirementLevel() {
         if count > 0 {
             requirementLevel = RequirementLevel.WARNING
         } else {
